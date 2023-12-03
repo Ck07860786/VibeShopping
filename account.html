@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>products</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css" 
+    integrity="sha512-6f7HT84a/AplPkpSRSKWqbseRTG4aRrhadjZezYQ0oVk/B+nm/US5KzQkyyOyh0Mn9cyDdChRdS9qaxJRHayww==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+</head>
+<body style="background-color: #dee2e6;">
+    <head>
+        <navbar class="nav">
+            <div class="logo"><h1>VibeShopping</h1></div>
+            <div class="nav-contant">
+                <ul>
+                    
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="/allproduct.html">Products</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Account</a></li>
+                </ul>
+            </div>
+            <div class="nav-icon">
+                <ul>
+                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                    <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                </ul>
+            </div>
+        </navbar>
+        
+    </head>
+
+    <!---------------------Account Page----------------------->
+    <div class="account-page">
+        <div class="contain">
+            <div class="row">
+                <div class="col3">
+                    <img  src="/image/banner1.png" >
+                </div>
+                <div class="col3">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="indicator">
+                        </div>
+
+                        <form id="LoginForm"> 
+                            <input type="text" placeholder="Enter User Id">
+                            <input type="password" placeholder="Enter password">
+                            <button type="submit" class="btn">Login</button>
+                            <a href="#">Forget password</a>
+                        </form>
+
+                        <form id="RegForm"> 
+                            <input type="text" placeholder="Enter User Id">
+                            <input type="email" placeholder="Enter email">
+                            <input type="password" placeholder="Enter password">
+                            <button type="submit" class="btn">Register</button>
+                        </form>
+                    
+                    
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<footer>
+    <div class="foot">
+        <div class="foot-row">
+              <div class="foot-col"><h3>Download Our App</h3>
+                <p style="color: #6c757d;">Download App for android & ios device</p >
+                   
+                    <img src="/image/app-store.png" width="100px">
+                    <img src="/image/play-store.png" width="100px">
+                   </div>
+            
+                <ul>
+                    <p>Get to know</p>
+                    <li>Careers</li>
+                    <li>Blog</li>
+                    <li>About VibeShopping</li>
+                    <li>Investor Relations</li>
+                    <li>Careers</li>
+                    <li>VibeShopping Devices</li>
+                    <li>VibeShopping Science</li>
+                </ul>
+                <ul>
+                    <p>Make Money with Us</p>
+                    <li>Sell products on VibeShopping</li>
+                    <li>Sell on vibeShopping Business</li>
+                    <li>ASell apps on VibeShopping</li>
+                    <li>Become an Affiliate  </li>
+                    <li>Advertise Your Products</li>
+                    <li>Self-Publish with Us </li>
+                    <li>Host an VibeShopping Hub</li>
+                </ul>
+                <ul>
+                    <p>VibeShopping Payment Products  </p>
+                    <li>VibeShopping Business Card</li>
+                    <li>Shop with Points </li>
+                    <li>Reload Your Balance </li>
+                    <li>VibeShopping Currency Converter </li>
+                    
+                   
+                </ul>
+        
+        </div>
+    <hr>
+    <p id="copyright">Copyright 2023 - VibeShopping</p>
+    </div>
+</footer>
+<script>
+    var LoginForm = document.getElementById("LoginForm");
+    var RegForm = document.getElementById("RegForm");
+    var indicator = document.getElementById("indicator");
+
+    function register(){
+        RegForm.style.transform = "translateX(0px)"
+        LoginForm.style.transform = "translateX(0px)"
+        indicator.style.transform = "translateX(110px)"
+    }
+
+    function login(){
+        RegForm.style.transform = "translateX(400px)"
+        LoginForm.style.transform = "translateX(400px)"
+        indicator.style.transform = "translateX(0px)"
+    }
+    
+
+
+</script>
+    
+</body>
+</html>

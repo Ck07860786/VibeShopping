@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cart Section Example</title>
+</head>
+<body>
+    <h1>Cart Section</h1>
+    
+    <div id="cart">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total Price: $<span id="total-price">0</span></p>
+    </div>
+    
+    <div id="products">
+        <h2>Available Products</h2>
+        <ul>
+            <li>
+                Product 1 - $10
+                <button class="add-to-cart" data-name="Product 1" data-price="10">Add to Cart</button>
+            </li>
+            <li>
+                Product 2 - $20
+                <button class="add-to-cart" data-name="Product 2" data-price="20">Add to Cart</button>
+            </li>
+            <!-- Add more products here -->
+        </ul>
+    </div>
+    
+    <script>
+        const cartItemsElement = document.getElementById("cart-items");
+        const totalPriceElement = document.getElementById("total-price");
+        const addToCartButtons = document.querySelectorAll(".add-to-cart");
+
+        const cart = [];
+
+        addToCartButtons.forEach(button => {
+            button.addEventListener("click", addToCart);
+        });
+
+        function addToCart(event) {
+            const productName = event.target.getAttribute("data-name");
+            const productPrice = parseFloat(event.target.getAttribute("data-price"));
+
+            cart.push({ name: productName, price: productPrice });
+            updateCart();
+        }
+
+        function updateCart() {
+            cartItemsElement.innerHTML = "";
+            let total = 0;
+
+            cart.forEach(item => {
+                const listItem = document.createElement("li");
+                listItem.textContent = `${item.name} - $${item.price}`;
+                cartItemsElement.appendChild(listItem);
+                total += item.price;
+            });
+
+            totalPriceElement.textContent = total.toFixed(2);
+        }
+    </script>
+</body>
+</html>
+
